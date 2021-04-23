@@ -77,6 +77,7 @@ colors.reverse() // it will print the varaible called colors. elements will prin
 ```
 9. `every`
 
+
 10. `shift`
 ```js
 colors.shift(); /// it will remove the first element from the array.
