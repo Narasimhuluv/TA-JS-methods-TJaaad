@@ -32,19 +32,104 @@ Example:
    - `charAt` accepts a index (number data type) and return the character on that index in the string.
 
 2. `toUpperCase`
+    Parameter: (index) defaults to 0 - (number data type)
+   - Return: character at specific index in the string (string data type)
+   ```js
+    name.toUpperCase(); // "ARYA STARK";
+    sentence.toUpperCase(); // "A QUICK BROWN FOR JUMPED OVER LAZY DOG";
+    houseName.toupperCase(); // "STARKS";
+    ```
+     ` toUpperCase`  accepts a index (number data type) and return the character on that index in the string.
+
+
 3. `toLowerCase`
+
+     Parameter: (index) defaults to 0 - (number data type)
+   - Return: character at specific index in the string (string data type)
+   ```js
+    name.toLowerCase(); // "ARYA STARK";
+    sentence.toLowerCase(); // "A QUICK BROWN FOR JUMPED OVER LAZY DOG";
+    houseName.toLowerCase(); // "STARKS";
+    ```
+     ` toLowerCase`  accepts a index (number data type) and return the character on that index in the string.
+
+
 4. `trim`
+example :- 
+```js 
+let username = "    Narasimhulu    "
+  username.trim() // "Narasimhulu"
+  ```
+  it will remove the spaces begining and ending of the string.
+
 5. `trimEnd`
+example :- 
+```js 
+let username = "Narasimhulu    "
+  username.trimEnd() // "Narasimhulu"
+  ```
+  it will remove the spaces ending of the string
+
+
 6. `trimStart`
+example :- 
+```js 
+let username = "    Narasimhulu    "
+  username.trimStart() // "Narasimhulu"
+  ```
+  it will remove the spaces starting of the string
 7. `concat`
+
+example :-
+```js
+let user = "chinna"
+let name = "Narasimhulu"
+
+user.concat(" is ",name)
+```
+it will add two varaible in a single sentences
+
 8. `endsWith`
+exmaple:-
+```js
+
+let person = "Narasimhulu";
+person.endsWith("h") // false
+
+
 9. `includes`
+
+example :- 
+```js
+
+let persons = "chinna";
+persons.includes("i") // true
+
+```
 10. `indexOf`
-11. `lastIndexOf`
+
+example :-
+```js
+let city = "bankok"
+city.indexOf("n")  // 2
+
+
+11. `lastIndexOf` //  it will take consider  index 0 from the ending of the word
 12. `padEnd`
+let village = "khajipet"
+village.padEnd("20",".")
+
 13. `padStart`
+let village = "khajipet"
+village.padStart("20",".")
 14. `repeat`
+let village = "khajipet";
+village.repeat(4)
 15. `replace`
+let village = "khajipet";
+village.replace("khajipet","chennur")
 16. `slice`
+sentance.slice(2,25) /// it will print the output index of 2 to 25 //  output :- "quick brown f"
 17. `split`
+sentance.split(" ") /// it will create a space between the words and letters . by using double quotes with space it will create spaces between the words. without space between the double quotes it will create a space between the letters in the word
 18. `substring`
