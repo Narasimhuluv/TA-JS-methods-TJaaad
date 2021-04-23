@@ -133,3 +133,4 @@ sentance.slice(2,25) /// it will print the output index of 2 to 25 //  output :-
 17. `split`
 sentance.split(" ") /// it will create a space between the words and letters . by using double quotes with space it will create spaces between the words. without space between the double quotes it will create a space between the letters in the word
 18. `substring`
+sentance.substring(0,10) // it will pring the data upto 10 index of the word
