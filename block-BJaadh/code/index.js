@@ -100,8 +100,8 @@ customers.filter(customer => {
   return customer.firstname.startsWith("J")
 })
 // - Create new array with only first name
-customers.map(customers => {
-  return customers.firstname
+customers.map(customer => {
+  return customer.firstname
 })
 
 // - Create new array with all the full names (ex: "Joe Blogs")
@@ -115,10 +115,10 @@ customer.map(customer => {
 // - Create a new array that contains only user who has at least one vowel in the firstname.
 let vowelCustomer = customers.filter((customer) => {
   if(customer.firstname.toLowerCase().includes("a") ||
-  customer.firstname.toLowerCase().includes("a") ||
-  customer.firstname.toLowerCase().includes("a") ||
-  customer.firstname.toLowerCase().includes("a") ||
-  customer.firstname.toLowerCase().includes("a")
+  customer.firstname.toLowerCase().includes("b") ||
+  customer.firstname.toLowerCase().includes("c") ||
+  customer.firstname.toLowerCase().includes("d") ||
+  customer.firstname.toLowerCase().includes("e")
   ){
     return true
   }else{
