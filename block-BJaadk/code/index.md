@@ -10,7 +10,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
+![](./images/for each.jpg)
 
 
 ```js
@@ -44,6 +44,8 @@ function addTwo(num) {
 }
 let doubleNumbers = numbers.map(addTwo);
 ```
+![](./images/map 1.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -60,6 +62,8 @@ function addTwo(num) {
 }
 let doubleNumbers = numbers.map(addTwo);
 ```
+![](./images/map 2.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -76,6 +80,8 @@ function test(num) {
 }
 let filteredNumbers = numbers.filter(test);
 ```
+![](./images/filter.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -100,3 +106,6 @@ function add(accumulator, currentValue) {
 }
 let sum = numbers.reduce(add);
 ```
+
+![](./images/reduce.jpg)
+
