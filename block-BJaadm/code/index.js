@@ -14,22 +14,42 @@ let persons = [
 ];
 
 // Create an array peopleName and store value of sex key from persons array
+let peopleName = persons.map((persons) => {
+  return  persons.name
+})
 
 // Create an array peopleGrade and store the value of grade key from persons array
+let peopleGrade = persons.map((persons) => {
+  return persons.grade
+})
 
 // Create an array peopleSex and store the value of sex key from persons array
+let peopleSex = persons.map((persons) => {
+  return persons.sex
+})
 
 // Log the filtered named of people in peopleName that starts with 'J' or 'P'
+console.log(peopleName.charAt("J"))
 
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
+console.log(peopleName.charAt("A"))
 
 // Log all the filtered male ('M') in persons array
+sex =  peopleSex.filter((male) => {
+  return male = "M"
+})
 
 // Log all the filtered female ('F') in persons array
+let sex = peopleSex.filter((female) => {
+  return femal = "F"
+})
 
 // Log all the filtered female ('F') whose name starts with 'C' or 'J' in persons array
 
 // Log all the even numbers from peopleGrade array
+peopleGrade.filter((even) =>{
+  return even % 2 === 0
+})
 
 // Find the first name that starts with 'J' in persons array and log the object
 
@@ -42,11 +62,16 @@ let persons = [
 // Filter all the male from persons array and store in malePersons array
 
 // Find the sum of all grades and store in gradeTotal
+ peopleGrade.reduce((acc,cv) => {
+    return acc + cv
+}) / peopleGrade.length
 
 // Find the average grade
-
+peopleGrade.reduce((acc,cv) => {
+  return acc + cv
+}) / peopleGrade.length
 // Find the average grade of male
-
+let gradeMale = peopleSex
 // Find the average grade of female
 
 // Find the highest grade
