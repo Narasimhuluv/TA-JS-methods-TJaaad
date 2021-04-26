@@ -21,7 +21,7 @@ let grades = persons.map((num) => {
 })
 grades.reduce((acc,cv) => {
   return acc + cv
-}) / grades.length;
+}) / persons.length;
 
 // Find the average grade of male
 let gradeMale = persons.filter((person) => person.sex === "M")
@@ -39,17 +39,63 @@ gradeFemale.reduce((acc,cv) => {
 })
 
 // Find the highest grade
-grade.sort((a,b) => a-b);
+let highest = persons.map((person) => person.grade).sort((a,b) => a-b).pop();
 
 // Find the highest grade in male
-[...gradeMale].sort((a,b) => a-b);
+// gradeMale.sort((a,b) => a-b);
+let highestMale = persons.filter((person) => person.sex === "M")
+.map((person) => person.grade)
+.sort((a,b) => a-b).pop();
+
+////////////////////////or/////////////////////////////
+
+let highestMale = persons.filter((person) => {
+  return person.sex === "M"
+})
+let hightgrade = highestMale.map((person)=> {
+  return person.grade
+})
+hightgrade.sort((a,b) => a-b).pop();
 
 // Find the highest grade in female
-[...gradeFemale].sort((a,b) => a-b);
+let highestFemale = persons.filter((person) => {
+  return person.sex === "F"
+})
+let hightgrade = highestFemale.map((person)=> {
+  return person.grade
+})
+hightgrade.sort((a,b) => a-b).pop();
 
 
 // Find the highest grade for people whose name starts with 'J' or 'P'
-[...grades].sort((a,b) => a-b)
+let names = persons.filter((person) => {
+  return person.name.startsWith("J")
+  // .map((person) => person.grade)
+  // .sort((a,b) => a-b).pop();
+})
+
+let gradesperPerson = names.map((person) => {
+  return person.grade
+})
+let  sorting = gradesperPerson.sort((a,b) => {
+  return a-b
+}).pop();
+
+
+
+let names = persons.filter((person) => {
+  return person.name.startsWith("P")
+  // .map((person) => person.grade)
+  // .sort((a,b) => a-b).pop();
+})
+
+let gradesperPerson = names.map((person) => {
+  return person.grade
+})
+let  sorting = gradesperPerson.sort((a,b) => {
+  return a-b
+}).pop()
+
 
 const fruitBasket = [
   'banana',
@@ -73,6 +119,15 @@ that fruit has appeared in the array. Store it in new variable fruitsObj
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
+fruitBasket.reduce((acc,cv) => {
+  if(acc[cv]){
+    acc[cv] = acc[cv] + 1;
+  }else{
+    acc[cv] = 1;
+  }
+ 
+  return acc
+}, {})
 
 /* 
 
@@ -83,6 +138,10 @@ Output:
 
 [['banana', 2], ['cherry', 3], ['orange', 3], ['apple', 2], ['fig', 1]]
 */
+Object.keys(fruitsObj).reduce((acc,cv) => {
+  acc = acc.concat([cv,fruitsObj[cv]]);
+  return acc
+},[])
 
 const data = [
   [1, 2, 3],
@@ -108,6 +167,13 @@ let nested_array = dataTwo.flat(Infinity)
 nested_array.reduce((acc,cv) => {
   return acc + cv
 });
+
+/////////////////////or////////////
+
+data.reduce((acc,cv) => {
+  acc = acc.concat(cv);
+  return acc
+})
 
 // Using reduce flat dataTwo array
 
@@ -160,4 +226,27 @@ let pipeline2 = [
   triple,
 ];
 
+function increament(num){
+  return num + 1
+}
+
+function increament(num){
+  return num - 1
+}
+
+function increament(num){
+  return num * 2
+}
+
+function increament(num){
+  return Math.round(num / 3)
+}
+
+function increament(num){
+  return num % 2 === 0
+}
+
 // Find the output using pipeline2 the initial value if 8
+pipeline2.reduce((acc,cv) => {
+  return acc + cv
+},8)
