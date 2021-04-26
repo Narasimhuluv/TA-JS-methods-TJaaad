@@ -16,18 +16,40 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+let grades = persons.map((num) => {
+  return num.grade
+})
+grades.reduce((acc,cv) => {
+  return acc + cv
+}) / grades.length;
 
 // Find the average grade of male
+let gradeMale = persons.filter((person) => person.sex === "M")
+let Male = gradeMale.reduce((acc,cv) => {
+  return acc + cv.grade
+})
 
 // Find the average grade of female
 
+let gradeFemale = persons.filter((person) => {
+  return person.sex === "F"
+})
+gradeFemale.reduce((acc,cv) => {
+  return acc + cv.grade
+})
+
 // Find the highest grade
+grade.sort((a,b) => a-b);
 
 // Find the highest grade in male
+[...gradeMale].sort((a,b) => a-b);
 
 // Find the highest grade in female
+[...gradeFemale].sort((a,b) => a-b);
+
 
 // Find the highest grade for people whose name starts with 'J' or 'P'
+[...grades].sort((a,b) => a-b)
 
 const fruitBasket = [
   'banana',
@@ -68,6 +90,11 @@ const data = [
   [7, 8, 9],
   [10, 11, 12],
 ];
+let nested_array = data.flat(Infinity)
+nested_array.reduce((acc,cv) => {
+  return acc + cv
+});
+
 
 // Using reduce flat data array
 
@@ -77,6 +104,10 @@ const dataTwo = [
   [7, 8, 9],
   [[10, 11], 12],
 ];
+let nested_array = dataTwo.flat(Infinity)
+nested_array.reduce((acc,cv) => {
+  return acc + cv
+});
 
 // Using reduce flat dataTwo array
 
