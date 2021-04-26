@@ -29,23 +29,31 @@ let peopleSex = persons.map((persons) => {
 })
 
 // Log the filtered named of people in peopleName that starts with 'J' or 'P'
-console.log(peopleName.charAt("J"))
+peopleName.filter((person) => {
+  let start = (person.startsWith("J")) && (person.endsWith("P"))
+  return start
+})
 
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
-console.log(peopleName.charAt("A"))
+peopleName.filter((person) => {
+  let start = (person.startsWith("J")) && (person.endsWith("P"))
+  return start
+})
 
 // Log all the filtered male ('M') in persons array
 sex =  peopleSex.filter((male) => {
-  return male = "M"
+  return (male === "M")
 })
 
 // Log all the filtered female ('F') in persons array
-let sex = peopleSex.filter((female) => {
-  return femal = "F"
+let sexF = peopleSex.filter((female) => {
+  return (female ==="F");
 })
 
 // Log all the filtered female ('F') whose name starts with 'C' or 'J' in persons array
-
+sexF.filter((female) => {
+  return female.startsWith("F")
+})
 // Log all the even numbers from peopleGrade array
 peopleGrade.filter((even) =>{
   return even % 2 === 0
@@ -75,6 +83,11 @@ let gradeMale = peopleSex
 // Find the average grade of female
 
 // Find the highest grade
+let highest = persons.sort((a,b) => {
+  return ((a.length >= b.length) || (a.length <= b.length))
+   
+})
+highest.pop();
 
 // Find the highest grade in male
 
