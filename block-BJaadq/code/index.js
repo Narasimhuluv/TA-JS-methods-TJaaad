@@ -2,18 +2,36 @@
 
 function countAllPeople() {
   // your code goes here
+  let totalPeople = 0;
+  got.houses.forEach((house) => {
+     totalPeople += house.people.length 
+ })
+ 
+ console.log(totalPeople)
 }
 
 function peopleByHouses() {
-  // your code goes here
+  // your code goes hereddd
+  got.houses.forEach((house) => {
+    housepeo = house.people
+  })
+  console.log(housepeo)
 }
 
 function everyone() {
   // your code goes here
+  got.houses.forEach((house) => {
+    every = house 
+  })
+  console.log(every)
 }
 
 function nameWithS() {
   // your code goes here
+   got.houses.forEach((with) =>  {
+     with.name.startsWith("S");
+  })
+  console.log(with)
 }
 
 function nameWithA() {
