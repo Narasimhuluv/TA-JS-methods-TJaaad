@@ -12,39 +12,55 @@ function countAllPeople() {
 
 function peopleByHouses() {
   // your code goes hereddd
+  let final = {};
   got.houses.forEach((house) => {
-    housepeo = house.people
-  })
-  console.log(housepeo)
+    final[house.name] = house.people.length
+  });
+  return final
 }
 
 function everyone() {
   // your code goes here
   got.houses.forEach((house) => {
-    every = house 
+    let peopleName = house.people.map((person) => person.name);
+    final = final.concat(peopleName)
   })
-  console.log(every)
+  return final
 }
 
 function nameWithS() {
   // your code goes here
-   got.houses.forEach((with) =>  {
-     with.name.startsWith("S");
-  })
-  console.log(with)
+  let allpeople = everyone();
+  return allpeople.filter((name) => {
+    name.toLowerCase().includes("a")
+  } )
+  
 }
 
 function nameWithA() {
   // your code goes here
+  let allpeople = everyone();
+  return allpeople.filter((name) => {
+    name.toLowerCase().includes("s")
+  } )
 }
 
 function surnameWithS() {
   // your code goes here
+  let allpeople = everyone();
+  return allpeople.filter((name) => {
+    name.split(" ")[1].toLowerCase().includes("surname with s")
+  } )
 }
 
 function surnameWithA() {
   // your code goes here
+  let allpeople = everyone();
+  return allpeople.filter((name) => {
+    name.split(" ")[1].toLowerCase().includes("surname with a")
+  } )
 }
+ 
 
 function peopleNameOfAllHouses() {
   // your code goes here
