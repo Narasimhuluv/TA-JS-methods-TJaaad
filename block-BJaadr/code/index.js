@@ -3,33 +3,61 @@
 function countAllPeople() {
   // your code goes here
   let totalPeople= 0;
-  got.houses.filter((people) => {
-     totalPeople += people
+  got.houses.reduce((acc,cv) => {
+     acc = acc + cv.people.length
+     return acc
   })
 }
 
 function peopleByHouses() {
   // your code goes here
+  return got.houses.reduce((acc,house) => {
+    acc[house.name] = house.people.length
+    return acc;
+  },{})
 }
 
 function everyone() {
   // your code goes here
+  return got.houses.reduce((acc,house) => {
+    acc = acc.concat(house.people.map((person) => person.name))
+    return acc;
+  },[])
 }
 
 function nameWithS() {
   // your code goes here
+  return got.houses.reduce((acc,house) => {
+    acc = acc.concat(house.people.map((person) => person.name)
+    .filter((person)=> person.toLowerCase().includes("s")))
+    return acc;
+  },[])
 }
 
 function nameWithA() {
   // your code goes here
+  return got.houses.reduce((acc,house) => {
+    acc = acc.concat(house.people.map((person) => person.name)
+    .filter((person)=> person.toLowerCase().includes("a")))
+    return acc;
+  },[])
+
 }
 
 function surnameWithS() {
   // your code goes here
+  let allpeople= everyone();
+  return allpeople.filter((name) => {
+    name.split(" ")[1].toLowerCase().includes("s")
+  })
 }
 
 function surnameWithA() {
   // your code goes here
+  let allpeople= everyone();
+  return allpeople.filter((name) => {
+    name.split(" ")[1].toLowerCase().includes("a")
+  })
 }
 
 function peopleNameOfAllHouses() {
