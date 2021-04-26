@@ -2,6 +2,10 @@
 
 function countAllPeople() {
   // your code goes here
+  let totalPeople= 0;
+  got.houses.filter((people) => {
+     totalPeople += people
+  })
 }
 
 function peopleByHouses() {
